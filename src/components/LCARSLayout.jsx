@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import Breadcrumbs from "./Breadcrumbs";
 import { useSound } from "./SoundManager";
 
@@ -11,28 +10,13 @@ const navLinks = [
 ];
 
 const LCARSLayout = () => {
-  const [search, setSearch] = useState("");
-  const navigate = useNavigate();
   const { playClick, ambientOn, toggleAmbient } = useSound();
-
-  const handleSearch = () => {
-    if (search.trim()) {
-      playClick();
-      navigate(`/encyclopedia?search=${encodeURIComponent(search.trim())}`);
-    }
-  };
 
   return (
     <div className="lcars-layout">
       <header className="lcars-header">
         <h2>LCARS Encyclopedia</h2>
       </header>
-      <SearchBar
-        value={search}
-        onChange={setSearch}
-        onSearch={handleSearch}
-        playClick={playClick}
-      />
       <Breadcrumbs />
       <nav className="lcars-nav" aria-label="Main Navigation">
         <ul className="lcars-nav-list">
