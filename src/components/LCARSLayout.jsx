@@ -26,9 +26,6 @@ const LCARSLayout = () => {
     <div className="lcars-layout">
       <header className="lcars-header">
         <h2>LCARS Encyclopedia</h2>
-        <button className="lcars-ambient-toggle" onClick={toggleAmbient}>
-          {ambientOn ? "Mute Ambient" : "Play Ambient"}
-        </button>
       </header>
       <SearchBar
         value={search}
