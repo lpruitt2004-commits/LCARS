@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Modal from "../components/Modal";
-import * as articleData from "../articles";
+import { starTrekArticles } from "../articles";
 import Article from "../components/Article";
 
-const suggestedArticles = Object.values(articleData);
+const suggestedArticles = starTrekArticles;
 
 const knowledgeQuotes = [
   {

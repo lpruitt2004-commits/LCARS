@@ -34,17 +34,16 @@ const LCARSLayout = () => {
         playClick={playClick}
       />
       <Breadcrumbs />
-      <nav className="lcars-nav">
-        {navLinks.map((link) => (
-          <Link
-            key={link.to}
-            to={link.to}
-            className="lcars-nav-link"
-            onClick={playClick}
-          >
-            {link.label}
-          </Link>
-        ))}
+      <nav className="lcars-nav" aria-label="Main Navigation">
+        <ul className="lcars-nav-list">
+          {navLinks.map((link) => (
+            <li key={link.to} className="lcars-nav-item">
+              <Link to={link.to} className="lcars-nav-link" onClick={playClick}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
       <main className="lcars-main">
         <Outlet />

@@ -17,13 +17,10 @@ const Breadcrumbs = () => {
   return (
     <nav className="lcars-breadcrumbs">
       {breadcrumbs.map((crumb, idx) => (
-        <span key={crumb.url}>
+        <span key={crumb.url} className="lcars-breadcrumb-pill">
           <Link to={crumb.url} className="lcars-breadcrumb-link">
             {crumb.label}
           </Link>
-          {idx < breadcrumbs.length - 1 && (
-            <span className="lcars-breadcrumb-sep"> / </span>
-          )}
         </span>
       ))}
     </nav>

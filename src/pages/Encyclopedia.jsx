@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as articleData from "../articles";
-
-const articles = Object.values(articleData);
+import { starTrekArticles, oldEarthArticles } from "../articles";
 
 const Encyclopedia = () => (
   <div className="lcars-encyclopedia">
-    <h3>Encyclopedia Articles</h3>
+    <h3>Star Trek Articles</h3>
     <ul>
-      {articles.map((article) => (
+      {starTrekArticles.map((article) => (
+        <li key={article.id}>
+          <Link to={`/article/${article.id}`} className="lcars-article-link">
+            {article.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+    <h3>Old Earth Articles</h3>
+    <ul>
+      {oldEarthArticles.map((article) => (
         <li key={article.id}>
           <Link to={`/article/${article.id}`} className="lcars-article-link">
             {article.title}

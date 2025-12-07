@@ -1,3 +1,178 @@
+/* LCARS Encyclopedia Main Content Area */
+.lcars-encyclopedia {
+  max-width: 950px;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 2.8rem 2.5rem 2.8rem 2.5rem;
+  background: rgba(24, 28, 42, 0.98);
+  border-radius: 40px;
+  box-shadow: 0 8px 36px #222a;
+  border: 5px solid #e89c2e;
+  position: relative;
+  z-index: 2;
+}
+
+.lcars-encyclopedia h3 {
+  color: #e89c2e;
+  font-family: "Orbitron", "Arial", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+
+.lcars-encyclopedia ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem 2.2rem;
+}
+
+.lcars-encyclopedia li {
+  margin: 0;
+  padding: 0;
+}
+
+/* LCARS Article Link Style */
+.lcars-article-link {
+  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+  border-radius: 999px;
+  padding: 0.7em 2em;
+  box-shadow: 0 2px 8px #2226;
+  color: #181c2a;
+  font-weight: bold;
+  font-size: 1.08rem;
+  text-decoration: none;
+  border: 2.5px solid #e89c2e;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  display: inline-block;
+}
+
+.lcars-article-link:hover,
+.lcars-article-link:focus {
+  background: linear-gradient(90deg, #2e5fa8 60%, #e89c2e 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+  text-shadow: 0 0 8px #2e5fa8;
+}
+.lcars-nav-list {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lcars-nav-item {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #181c2a !important;
+}
+/* Unified LCARS Pills and Nav Links */
+.lcars-breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem 0;
+  font-size: 1.18rem;
+  font-family: "Orbitron", "Arial", sans-serif;
+}
+
+.lcars-breadcrumb-pill,
+.lcars-nav-link,
+.lcars-pill {
+  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+  border-radius: 999px;
+  padding: 0.8em 2.2em;
+  box-shadow: 0 2px 8px #2226;
+  color: #181c2a;
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-decoration: none;
+  border: 2.5px solid #e89c2e;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  display: inline-block;
+}
+.lcars-breadcrumb-link,
+.lcars-nav-link {
+  color: #181c2a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.lcars-breadcrumb-link:hover,
+.lcars-breadcrumb-link:focus,
+.lcars-nav-link:hover,
+.lcars-nav-link:focus,
+.lcars-pill:hover,
+.lcars-pill:focus {
+  background: linear-gradient(90deg, #2e5fa8 60%, #e89c2e 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+  text-shadow: 0 0 8px #2e5fa8;
+}
+.lcars-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* LCARS Breadcrumbs */
+.lcars-breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1.5rem 0 2.5rem 0;
+  font-size: 1.18rem;
+  font-family: "Orbitron", "Arial", sans-serif;
+}
+
+.lcars-breadcrumb-block {
+  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+  border-radius: 999px;
+  padding: 0.5em 1.3em;
+  box-shadow: 0 2px 8px #2226;
+  display: flex;
+  align-items: center;
+}
+
+.lcars-breadcrumb-link {
+  color: #181c2a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.lcars-breadcrumb-link:hover,
+.lcars-breadcrumb-link:focus {
+  color: #fff;
+  text-shadow: 0 0 8px #2e5fa8;
+}
+
+.lcars-breadcrumb-sep {
+  color: #2e5fa8;
+  font-size: 1.3rem;
+  margin: 0 0.5em;
+  font-weight: bold;
+  vertical-align: middle;
+}
 /* Captain's Log styles */
 .lcars-captains-log {
   max-width: 900px;
@@ -129,6 +304,7 @@
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    align-items: center;
     margin: 2rem 0 2.5rem 0;
   }
 
@@ -151,27 +327,17 @@
     transform: translateY(-2px) scale(1.04);
     outline: none;
   }
-  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
-  color: #1a1a1a;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  transition: background 0.2s, color 0.2s, transform 0.1s;
-  border: 2px solid #e89c2e;
-  cursor: pointer;
-}
-.lcars-pill:hover,
-.lcars-pill:focus {
-  background: linear-gradient(90deg, #2e5fa8 60%, #e89c2e 100%);
-  color: #fff;
-  transform: translateY(-2px) scale(1.04);
-  outline: none;
-}
-body {
+  .lcars-pill:hover,
+  .lcars-pill:focus {
+    background: linear-gradient(90deg, #2e5fa8 60%, #e89c2e 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+  }
+
   margin: 0;
   font-family: "Segoe UI", "Arial", sans-serif;
-  background: #1a1a1a;
+  background: #181c2a;
   color: #fff;
 }
 
