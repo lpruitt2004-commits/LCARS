@@ -21,9 +21,80 @@
 }
 
 .lcars-pill {
-  display: inline-block;
-  padding: 0.7em 1.6em;
-  border-radius: 999px;
+  .lcars-header {
+    background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+    border-radius: 0 0 32px 32px;
+    padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 24px #2228;
+    border-bottom: 4px solid #e89c2e;
+  }
+
+  .lcars-header h2 {
+    color: #181c2a;
+    font-family: "Orbitron", "Arial", sans-serif;
+    font-size: 2.1rem;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  .lcars-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 2.5rem auto 2.5rem auto;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    background: rgba(24, 28, 42, 0.96);
+    border-radius: 36px;
+    box-shadow: 0 6px 32px #222a;
+    border: 4px solid #2e5fa8;
+  }
+  .lcars-ambient-toggle {
+    background: #2e5fa8;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.5em 1.2em;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #2226;
+    margin-left: 1.5rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .lcars-ambient-toggle:hover {
+    background: #e89c2e;
+    color: #2e5fa8;
+  }
+
+  .lcars-nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0 2.5rem 0;
+  }
+
+  .lcars-nav-link {
+    background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+    color: #181c2a;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.7em 2em;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #2226;
+    border: 2px solid #e89c2e;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+  }
+  .lcars-nav-link:hover,
+  .lcars-nav-link:focus {
+    background: linear-gradient(90deg, #2e5fa8 60%, #e89c2e 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+  }
   background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
   color: #1a1a1a;
   font-weight: bold;
@@ -48,13 +119,52 @@ body {
   color: #fff;
 }
 
-.lcars-landing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.lcars-layout {
+  position: relative;
   min-height: 100vh;
-  background: linear-gradient(90deg, #e89c2e 0%, #2e5fa8 100%);
+  background: #181c2a;
+  overflow-x: hidden;
+}
+
+.lcars-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  background: rgba(24, 28, 42, 0.96);
+  border-radius: 36px;
+  box-shadow: 0 6px 32px #222a;
+  border: 4px solid #2e5fa8;
+}
+
+/* LCARS bars */
+.lcars-bar {
+  position: absolute;
+  z-index: 1;
+  background: #e89c2e;
+}
+.lcars-bar-vertical {
+  width: 36px;
+  height: 80vh;
+  border-radius: 24px;
+  top: 10vh;
+}
+.lcars-bar-left {
+  left: 0;
+  background: linear-gradient(180deg, #e89c2e 80%, #2e5fa8 100%);
+}
+.lcars-bar-right {
+  right: 0;
+  background: linear-gradient(180deg, #2e5fa8 0%, #e89c2e 80%);
+}
+.lcars-bar-horizontal {
+  left: 36px;
+  right: 36px;
+  top: 0;
+  height: 36px;
+  border-radius: 0 0 24px 24px;
+  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
 }
 
 .lcars-quote {
@@ -65,6 +175,10 @@ body {
   max-width: 600px;
   text-align: center;
   border: 4px solid #e89c2e;
+  border-radius: 32px;
+  padding: 2.2rem 3.5rem;
+  box-shadow: 0 0 32px #222;
+  margin-bottom: 2.5rem;
 }
 
 .lcars-quote h1 {
@@ -92,4 +206,51 @@ body {
   font-size: 1.5rem;
   text-align: center;
   margin-top: 2rem;
+}
+
+.lcars-modal {
+  border-radius: 36px;
+  padding: 2.5rem 3rem 2rem 3rem;
+  box-shadow: 0 0 40px #222;
+  border: 4.5px solid #e89c2e;
+}
+.lcars-quote {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 32px;
+  padding: 2.2rem 3.5rem;
+  box-shadow: 0 0 32px #222;
+  max-width: 600px;
+  text-align: center;
+  border: 4px solid #e89c2e;
+  margin-bottom: 2.5rem;
+}
+
+.lcars-pill {
+  display: inline-block;
+  padding: 0.8em 2.2em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  border: 2.5px solid #e89c2e;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.lcars-modal {
+  background: #181c2a;
+  border-radius: 36px;
+  padding: 2.5rem 3rem 2rem 3rem;
+  box-shadow: 0 0 40px #222;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 4.5px solid #e89c2e;
+  position: relative;
+  color: #fff;
 }

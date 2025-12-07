@@ -1,26 +1,9 @@
 import React, { useState } from "react";
 import Modal from "../components/Modal";
+import * as articleData from "../articles";
+import Article from "../components/Article";
 
-const suggestedArticles = [
-  {
-    id: "warp-drive",
-    title: "Warp Drive",
-    content:
-      "Warp drive is a form of faster-than-light propulsion in the Star Trek universe, allowing starships to travel vast distances across space.",
-  },
-  {
-    id: "holodeck",
-    title: "Holodeck",
-    content:
-      "The holodeck is a simulated reality facility aboard starships and starbases, used for training, recreation, and entertainment.",
-  },
-  {
-    id: "prime-directive",
-    title: "Prime Directive",
-    content:
-      "The Prime Directive is Starfleet's most important rule: non-interference with the internal development of alien civilizations.",
-  },
-];
+const suggestedArticles = Object.values(articleData);
 
 const Landing = () => {
   const [openId, setOpenId] = useState(null);
@@ -52,12 +35,7 @@ const Landing = () => {
         </ul>
       </div>
       <Modal open={!!openArticle} onClose={() => setOpenId(null)}>
-        {openArticle && (
-          <div className="lcars-article-modal">
-            <h2>{openArticle.title}</h2>
-            <p>{openArticle.content}</p>
-          </div>
-        )}
+        {openArticle && <Article {...openArticle} />}
       </Modal>
     </div>
   );

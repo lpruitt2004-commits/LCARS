@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as articleData from "../articles";
 
-// Example articles
-const articles = [
-  { id: "warp-drive", title: "Warp Drive" },
-  { id: "holodeck", title: "Holodeck" },
-  { id: "prime-directive", title: "Prime Directive" },
-];
+const articles = Object.values(articleData);
 
 const Encyclopedia = () => (
   <div className="lcars-encyclopedia">
