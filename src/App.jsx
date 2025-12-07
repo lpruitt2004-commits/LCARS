@@ -6,6 +6,7 @@ const LCARSLayout = lazy(() => import("./components/LCARSLayout"));
 const Landing = lazy(() => import("./pages/Landing"));
 const Encyclopedia = lazy(() => import("./pages/Encyclopedia"));
 const Article = lazy(() => import("./pages/Article"));
+const CaptainsLog = lazy(() => import("./pages/CaptainsLog"));
 
 const App = () => (
   <Router>
@@ -15,6 +16,7 @@ const App = () => (
           <Route index element={<Landing />} />
           <Route path="encyclopedia" element={<Encyclopedia />} />
           <Route path="article/:id" element={<Article />} />
+          <Route path="captains-log" element={<CaptainsLog />} />
         </Route>
       </Routes>
     </Suspense>

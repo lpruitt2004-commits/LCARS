@@ -7,6 +7,7 @@ import { useSound } from "./SoundManager";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/encyclopedia", label: "Encyclopedia" },
+  { to: "/captains-log", label: "Captain's Log" },
 ];
 
 const LCARSLayout = () => {
