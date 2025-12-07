@@ -1,3 +1,46 @@
+.lcars-suggestions {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.lcars-suggestions h3 {
+  color: #e89c2e;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.lcars-suggestion-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lcars-pill {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e89c2e 60%, #2e5fa8 100%);
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  border: 2px solid #e89c2e;
+  cursor: pointer;
+}
+.lcars-pill:hover,
+.lcars-pill:focus {
+  background: linear-gradient(90deg, #2e5fa8 60%, #e89c2e 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
 body {
   margin: 0;
   font-family: "Segoe UI", "Arial", sans-serif;
