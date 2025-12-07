@@ -1,10 +1,11 @@
 import React from "react";
 
-const SearchBar = ({ value, onChange, onSearch }) => (
+const SearchBar = ({ value, onChange, onSearch, playClick }) => (
   <form
     className="lcars-search-bar"
     onSubmit={(e) => {
       e.preventDefault();
+      if (playClick) playClick();
       onSearch();
     }}
   >
